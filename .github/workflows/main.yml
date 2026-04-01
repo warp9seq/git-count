@@ -15,5 +15,5 @@ jobs:
         run: ./getcounts.sh
       - name: try
         run: |
-          curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC }}" \
           https://api.github.com/repos/warp9seq/minimod/traffic/clones
