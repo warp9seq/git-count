@@ -1,0 +1,15 @@
+name: Count Git clones
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 0 * * *"
+
+jobs:
+  count-downloads:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+      - name: get counts
+        run: ./getcounts.sh
