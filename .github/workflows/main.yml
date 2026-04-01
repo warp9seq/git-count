@@ -41,5 +41,41 @@ jobs:
           YEAR=$(echo $DATE | cut -d'_' -f3)
           mkdir -p blue-crab/${YEAR}
           curl -H "Authorization: Bearer ${{ secrets.KUVA_BUTTERYEEL_BLUECRAB }}" https://api.github.com/repos/Psy-Fer/blue-crab/traffic/clones > blue-crab/${YEAR}/${DATE}.json
+      - name: f5c
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p f5c/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_2008 }}" https://api.github.com/repos/hasindu2008/f5c/traffic/clones > f5c/${YEAR}/${DATE}.json
+      - name: slow5lib
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p slow5lib/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_2008 }}" https://api.github.com/repos/hasindu2008/slow5lib/traffic/clones > slow5lib/${YEAR}/${DATE}.json
+      - name: slow5tools
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p slow5tools/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_2008 }}" https://api.github.com/repos/hasindu2008/slow5tools/traffic/clones > slow5tools/${YEAR}/${DATE}.json
+      - name: sigtk
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p sigtk/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_2008 }}" https://api.github.com/repos/hasindu2008/sigtk/traffic/clones > sigtk/${YEAR}/${DATE}.json
+      - name: squigulator
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p squigulator/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_2008 }}" https://api.github.com/repos/hasindu2008/squigulator/traffic/clones > squigulator/${YEAR}/${DATE}.json
+      - name: cornetto
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p cornetto/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_2008 }}" https://api.github.com/repos/hasindu2008/cornetto/traffic/clones > cornetto/${YEAR}/${DATE}.json
       - name: get counts
         run: ./getcounts.sh
