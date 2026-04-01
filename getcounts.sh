@@ -14,7 +14,8 @@ if ! git diff --cached --quiet; then
 	git push || die "push failed"
 fi
 
-# cat logs/* | grep "slorado" | grep "REST.GET.OBJECT" | grep " 200 " | wc -l > slorado.txt
+python3 sumup.py minimod > minimod.txt
+python3 sumup.py openfish > openfish.txt
 
 
 
