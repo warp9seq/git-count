@@ -12,7 +12,7 @@ python3 sumup.py openfish > openfish.txt
 
 git config --global user.email "action@github.com" || die "Failed to configure git email"
 git config --global user.name "GitHub Action" || die "Failed to configure git name"
-git add minimod/ openfish/ || die "adding failed"
+git add minimod/ minimod.txt openfish/ openfish.txt || die "adding failed"
 if ! git diff --cached --quiet; then
     git commit -m "Update download counts" || die "commit failed"
 	git push || die "push failed"
