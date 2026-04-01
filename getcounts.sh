@@ -6,13 +6,15 @@ die() {
 	exit 1
 }
 
+LIST="minimod openfish"
 
-python3 sumup.py minimod > minimod.txt
-python3 sumup.py openfish > openfish.txt
+for each in $LIST; do
+	python3 sumup.py ${each} > ${each}.txt
+done
 
 git config --global user.email "action@github.com" || die "Failed to configure git email"
 git config --global user.name "GitHub Action" || die "Failed to configure git name"
-git add minimod/ minimod.txt openfish/ openfish.txt || die "adding failed"
+git add *.txt ${LIST} || die "adding failed"
 if ! git diff --cached --quiet; then
     git commit -m "Update download counts" || die "commit failed"
 	git push || die "push failed"
