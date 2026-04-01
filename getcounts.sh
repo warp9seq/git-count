@@ -6,7 +6,7 @@ die() {
 	exit 1
 }
 
-LIST="minimod openfish"
+LIST="minimod openfish kuva buttery-eel blue-crab"
 
 for each in $LIST; do
 	python3 sumup.py ${each} > ${each}.txt
