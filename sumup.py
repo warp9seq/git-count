@@ -1,6 +1,7 @@
 import json
 import glob
 import sys
+import os
 
 if len(sys.argv) < 2:
     print("Usage: python script.py <base_dir>")
@@ -8,7 +9,7 @@ if len(sys.argv) < 2:
 
 base_dir = sys.argv[1]
 
-pattern = f"{base_dir}/*/*.json"
+pattern = os.path.join(base_dir, "*", "*.json")
 files = glob.glob(pattern)
 
 daily = {}
