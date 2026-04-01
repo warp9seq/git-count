@@ -2,7 +2,7 @@ name: Count Git clones
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 0 * * *"
+    - cron: "0 0 */5 * *"
 
 jobs:
   count-downloads:
@@ -11,9 +11,19 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
+      - name: minimod
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p minimod/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC }}" \
+          https://api.github.com/repos/warp9seq/minimod/traffic/clones > minimod/${YEAR}/${DATE}.json
+      - name: openfish
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p openfish/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC }}" \
+          https://api.github.com/repos/warp9seq/openfish/traffic/clones > openfish/${YEAR}/${DATE}.json
       - name: get counts
         run: ./getcounts.sh
-      - name: try
-        run: |
-          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC }}" \
-          https://api.github.com/repos/warp9seq/minimod/traffic/clones
