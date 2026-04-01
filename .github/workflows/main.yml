@@ -16,14 +16,30 @@ jobs:
           DATE=$(date +"%d_%m_%Y")
           YEAR=$(echo $DATE | cut -d'_' -f3)
           mkdir -p minimod/${YEAR}
-          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC }}" \
-          https://api.github.com/repos/warp9seq/minimod/traffic/clones > minimod/${YEAR}/${DATE}.json
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC }}" https://api.github.com/repos/warp9seq/minimod/traffic/clones > minimod/${YEAR}/${DATE}.json
       - name: openfish
         run: |
           DATE=$(date +"%d_%m_%Y")
           YEAR=$(echo $DATE | cut -d'_' -f3)
           mkdir -p openfish/${YEAR}
-          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC }}" \
-          https://api.github.com/repos/warp9seq/openfish/traffic/clones > openfish/${YEAR}/${DATE}.json
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC }}" https://api.github.com/repos/warp9seq/openfish/traffic/clones > openfish/${YEAR}/${DATE}.json
+      - name: kuva
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p kuva/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.KUVA_BUTTERYEEL_BLUECRAB }}" https://api.github.com/repos/Psy-Fer/kuva/traffic/clones > kuva/${YEAR}/${DATE}.json
+      - name: buttery-eel
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p buttery-eel/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.KUVA_BUTTERYEEL_BLUECRAB }}" https://api.github.com/repos/Psy-Fer/buttery-eel/traffic/clones > buttery-eel/${YEAR}/${DATE}.json
+      - name: blue-crab
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p blue-crab/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.KUVA_BUTTERYEEL_BLUECRAB }}" https://api.github.com/repos/Psy-Fer/blue-crab/traffic/clones > blue-crab/${YEAR}/${DATE}.json
       - name: get counts
         run: ./getcounts.sh
