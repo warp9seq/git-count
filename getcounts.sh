@@ -12,7 +12,7 @@ for each in $LIST; do
 	python3 sumup.py ${each} > ${each}.txt
 	T=$(grep "Total clones" ${each}.txt | awk '{print $NF}')
 	U=$(grep "Total uniques" ${each}.txt | awk '{print $NF}')
-	echo '{"schemaVersion": 1, "label": "total clones", "message": "count: '${T}' | uniques: '${U}'" }' > ${each}.json
+	echo '{ "schemaVersion": 1, "label": "total clones", "message": "count '${T}' | uniques '${U}'", "color": "blue" }' > ${each}.json
 done
 
 git config --global user.email "action@github.com" || die "Failed to configure git email"
