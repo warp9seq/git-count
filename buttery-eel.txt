@@ -1,2 +1,2 @@
-Total clones: 5
-Total uniques: 5
+Total clones: 10
+Total uniques: 10
