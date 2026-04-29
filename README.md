@@ -20,3 +20,9 @@ Track Git clone counts starting from April 2026. Tools created before that date 
 |bonsonW| slow5curl | [![slow5curl](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/slow5curl.json)](https://github.com/BonsonW/slow5curl) |
 |bonsonW| slorado | [![slorado](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/slorado.json)](https://github.com/BonsonW/slorado) |
 
+
+## Adding a new tool
+
+1. Key
+2. Add to .github/workflows
+3. Update LIST in getcounts.sh
