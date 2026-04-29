@@ -18,7 +18,7 @@ Track Git clone counts starting from April 2026. Tools created before that date 
 || squigulator | [![squigulator](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/squigulator.json)](https://github.com/hasindu2008/squigulator) |
 || cornetto | [![cornetto](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/cornetto.json)](https://github.com/hasindu2008/cornetto) |
 |bonsonW| slow5curl | [![slow5curl](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/slow5curl.json)](https://github.com/BonsonW/slow5curl) |
-|bonsonW| slorado | [![slorado](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/slorado.json)](https://github.com/BonsonW/slorado) |
+|| slorado | [![slorado](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/slorado.json)](https://github.com/BonsonW/slorado) |
 
 
 ## Adding a new tool
