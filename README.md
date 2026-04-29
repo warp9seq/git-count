@@ -23,6 +23,9 @@ Track Git clone counts starting from April 2026. Tools created before that date 
 
 ## Adding a new tool
 
-1. Key
-2. Add to .github/workflows
-3. Update LIST in getcounts.sh
+1. For a given account generate a readonly [personal access token](https://github.com/settings/personal-access-tokens). Select "Only Select repositories". Administration access "Read-only"
+   <img width="1064" height="995" alt="image" src="https://github.com/user-attachments/assets/da105a86-2603-4c06-ac18-caa44a240479" />
+2. Then add that repo secret to [actions](https://github.com/warp9seq/git-count/settings/secrets/actions)
+3. Add to .github/workflows
+4. Update LIST in getcounts.sh
+5. Manually trigger and see if all good and nothing is broken
