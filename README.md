@@ -1,6 +1,6 @@
 # git-count
-Git clone counts. Experimenting.
 
+Track Git clone counts starting from April 2026. Tools created before that date won’t have any recorded stats prior to this collection period.
 
 |Account | Tool | Clones |
 |------|--------|--------|
@@ -9,6 +9,8 @@ Git clone counts. Experimenting.
 |Psy-Fer| kuva | [![kuva](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/kuva.json)](https://github.com/Psy-Fer/kuva) |
 || buttery-eel | [![buttery-eel](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/buttery-eel.json)](https://github.com/Psy-Fer/buttery-eel) |
 || blue-crab | [![blue-crab](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/blue-crab.json)](https://github.com/Psy-Fer/blue-crab) |
+|| bedpull | [![bedpull](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/bedpull.json)](https://github.com/Psy-Fer/bedpull) |
+|| poa-consensus | [![poa-consensus](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/poa-consensus.json)](https://github.com/Psy-Fer/poa-consensus) |
 |hasindu2008| f5c | [![f5c](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/f5c.json)](https://github.com/hasindu2008/f5c/) |
 || slow5lib | [![slow5lib](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/slow5lib.json)](https://github.com/hasindu2008/slow5lib) |
 || slow5tools | [![slow5tools](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/warp9seq/git-count/refs/heads/main/sum/slow5tools.json)](https://github.com/hasindu2008/slow5tools) |
