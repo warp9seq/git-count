@@ -17,7 +17,7 @@ done
 
 git config --global user.email "action@github.com" || die "Failed to configure git email"
 git config --global user.name "GitHub Action" || die "Failed to configure git name"
-git add sum/*.txt sum/*.json || die "adding failed"
+git add sum/*.txt sum/*.json ${LIST} || die "adding failed"
 if ! git diff --cached --quiet; then
     git commit -m "Update download counts" || die "commit failed"
 	git push || die "push failed"
