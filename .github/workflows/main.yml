@@ -28,31 +28,31 @@ jobs:
           DATE=$(date +"%d_%m_%Y")
           YEAR=$(echo $DATE | cut -d'_' -f3)
           mkdir -p kuva/${YEAR}
-          curl -H "Authorization: Bearer ${{ secrets.KUVA_BUTTERYEEL_BLUECRAB }}" https://api.github.com/repos/Psy-Fer/kuva/traffic/clones > kuva/${YEAR}/${DATE}.json
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_PSYFER }}" https://api.github.com/repos/Psy-Fer/kuva/traffic/clones > kuva/${YEAR}/${DATE}.json
       - name: buttery-eel
         run: |
           DATE=$(date +"%d_%m_%Y")
           YEAR=$(echo $DATE | cut -d'_' -f3)
           mkdir -p buttery-eel/${YEAR}
-          curl -H "Authorization: Bearer ${{ secrets.KUVA_BUTTERYEEL_BLUECRAB }}" https://api.github.com/repos/Psy-Fer/buttery-eel/traffic/clones > buttery-eel/${YEAR}/${DATE}.json
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_PSYFER }}" https://api.github.com/repos/Psy-Fer/buttery-eel/traffic/clones > buttery-eel/${YEAR}/${DATE}.json
       - name: blue-crab
         run: |
           DATE=$(date +"%d_%m_%Y")
           YEAR=$(echo $DATE | cut -d'_' -f3)
           mkdir -p blue-crab/${YEAR}
-          curl -H "Authorization: Bearer ${{ secrets.KUVA_BUTTERYEEL_BLUECRAB }}" https://api.github.com/repos/Psy-Fer/blue-crab/traffic/clones > blue-crab/${YEAR}/${DATE}.json
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_PSYFER }}" https://api.github.com/repos/Psy-Fer/blue-crab/traffic/clones > blue-crab/${YEAR}/${DATE}.json
       - name: bedpull
         run: |
           DATE=$(date +"%d_%m_%Y")
           YEAR=$(echo $DATE | cut -d'_' -f3)
           mkdir -p bedpull/${YEAR}
-          curl -H "Authorization: Bearer ${{ secrets.KUVA_BUTTERYEEL_BLUECRAB }}" https://api.github.com/repos/Psy-Fer/bedpull/traffic/clones > bedpull/${YEAR}/${DATE}.json
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_PSYFER }}" https://api.github.com/repos/Psy-Fer/bedpull/traffic/clones > bedpull/${YEAR}/${DATE}.json
       - name: poa-consensus
         run: |
           DATE=$(date +"%d_%m_%Y")
           YEAR=$(echo $DATE | cut -d'_' -f3)
           mkdir -p poa-consensus/${YEAR}
-          curl -H "Authorization: Bearer ${{ secrets.KUVA_BUTTERYEEL_BLUECRAB }}" https://api.github.com/repos/Psy-Fer/poa-consensus/traffic/clones > poa-consensus/${YEAR}/${DATE}.json
+          curl -H "Authorization: Bearer ${{ secrets.TRAFFIC_PSYFER }}" https://api.github.com/repos/Psy-Fer/poa-consensus/traffic/clones > poa-consensus/${YEAR}/${DATE}.json
       - name: f5c
         run: |
           DATE=$(date +"%d_%m_%Y")
