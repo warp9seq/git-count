@@ -101,5 +101,17 @@ jobs:
           YEAR=$(echo $DATE | cut -d'_' -f3)
           mkdir -p slorado/${YEAR}
           curl -H "Authorization: Bearer ${{ secrets.BONFIRE }}" https://api.github.com/repos/BonsonW/slorado/traffic/clones > slorado/${YEAR}/${DATE}.json
+      - name: slorado
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p slorado/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.BONFIRE }}" https://api.github.com/repos/BonsonW/slorado/traffic/clones > slorado/${YEAR}/${DATE}.json
+      - name: squigualiser
+        run: |
+          DATE=$(date +"%d_%m_%Y")
+          YEAR=$(echo $DATE | cut -d'_' -f3)
+          mkdir -p squigualiser/${YEAR}
+          curl -H "Authorization: Bearer ${{ secrets.HIRUNA_TRAFFIC }}" https://api.github.com/repos/hiruna72/squigualiser/traffic/clones > squigualiser/${YEAR}/${DATE}.json
       - name: get counts
         run: ./getcounts.sh
