@@ -110,4 +110,6 @@ jobs:
       - name: get counts
         run: ./getcounts.sh
       - name: check for error
-        run: grep "Bad credentials" */*/* && echo "::error::Credential check failed" && exit 1
+        run: |
+          grep "Bad credentials" */*/* && echo "::error::Credential check failed" && exit 1
+          echo "All credential checks passed"
