@@ -15,8 +15,8 @@ for each in $LIST; do
 	echo '{ "schemaVersion": 1, "label": "total clones", "message": "count '${T}' | uniques '${U}'", "color": "blue" }' > sum/${each}.json
 done
 
-git config --global user.email "action@github.com" || die "Failed to configure git email"
-git config --global user.name "GitHub Action" || die "Failed to configure git name"
+git config --global user.email || git config --global user.email "action@github.com" || die "Failed to configure git email"
+git config --global user.name || git config --global user.name "GitHub Action" || die "Failed to configure git name"
 git add sum/*.txt sum/*.json ${LIST} || die "adding failed"
 if ! git diff --cached --quiet; then
     git commit -m "Update download counts" || die "commit failed"
