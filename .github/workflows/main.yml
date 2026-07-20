@@ -109,3 +109,5 @@ jobs:
           curl -H "Authorization: Bearer ${{ secrets.HIRUNA_TRAFFIC }}" https://api.github.com/repos/hiruna72/squigualiser/traffic/clones > squigualiser/${YEAR}/${DATE}.json
       - name: get counts
         run: ./getcounts.sh
+      - name: check for error
+        run: grep "Bad credentials" */*/* && echo "::error::Credential check failed" && exit 1
